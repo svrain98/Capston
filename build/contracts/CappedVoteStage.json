@@ -1,0 +1,1460 @@
+{
+  "contractName": "CappedVoteStage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_choiceId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getChoiceInfo",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "winningChoiceId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalAmount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "investmentReceived",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_choiceId",
+          "type": "uint256"
+        },
+        {
+          "name": "_VoteToken",
+          "type": "uint256"
+        }
+      ],
+      "name": "Vote",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "tallyVotes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "investmentRefunded",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_endTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "setTime",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "name": "_mintedAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "finalize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "refund",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isInvestmentHigher",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_num",
+          "type": "uint256"
+        },
+        {
+          "name": "_choice_address",
+          "type": "address"
+        },
+        {
+          "name": "_choice_name",
+          "type": "string"
+        }
+      ],
+      "name": "setChoices",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "attendStage",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_participant",
+          "type": "address"
+        }
+      ],
+      "name": "getParticipantInfo",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_winningChoiceId",
+          "type": "uint256"
+        }
+      ],
+      "name": "endVote",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "release",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isFinalized",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "released",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getChoices",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "numOfChoices",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "frozenAccount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_max_choice_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "finalizeStage",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_authorizedAccount",
+          "type": "address"
+        },
+        {
+          "name": "_allowance",
+          "type": "uint256"
+        }
+      ],
+      "name": "authorize",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkMaxInvestment",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_choice",
+          "type": "uint256"
+        }
+      ],
+      "name": "attendStage",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isRefundingAllowed",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VoteToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "freeze",
+          "type": "bool"
+        }
+      ],
+      "name": "freezeAccount",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "coinBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_choiceId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVotes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_totalAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "_numOfChoices",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "frozen",
+          "type": "bool"
+        }
+      ],
+      "name": "FrozenAccount",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "zombieId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "totalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewStage",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.23;\n\nimport \"../StageFactory.sol\";\nimport \"../SecondStage/VoteStageFactory.sol\";\nimport \"../../Strategy/EachStrategy/UnlimitedStrategy.sol\";\ncontract CappedVoteStage is VoteStageFactory{\n    constructor(string _name, uint256 _totalAmount,uint256 _numOfChoices) \n    StageFactory(_name,_totalAmount,_numOfChoices)\n     payable public{\n    }\n    function createLimitStrategy() \n        internal returns (LimitStrategy) {\n        \n        return new UnlimitedStrategy(); \n    }\n}\n",
+  "sourcePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/ThirdStage/UnlimitedVoteStage.sol",
+  "ast": {
+    "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/ThirdStage/UnlimitedVoteStage.sol",
+    "exportedSymbols": {
+      "CappedVoteStage": [
+        1375
+      ]
+    },
+    "id": 1376,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1344,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/StageFactory.sol",
+        "file": "../StageFactory.sol",
+        "id": 1345,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 1307,
+        "src": "26:29:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/SecondStage/VoteStageFactory.sol",
+        "file": "../SecondStage/VoteStageFactory.sol",
+        "id": 1346,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 772,
+        "src": "56:45:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/EachStrategy/UnlimitedStrategy.sol",
+        "file": "../../Strategy/EachStrategy/UnlimitedStrategy.sol",
+        "id": 1347,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 1438,
+        "src": "102:59:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1348,
+              "name": "VoteStageFactory",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 771,
+              "src": "190:16:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VoteStageFactory_$771",
+                "typeString": "contract VoteStageFactory"
+              }
+            },
+            "id": 1349,
+            "nodeType": "InheritanceSpecifier",
+            "src": "190:16:5"
+          }
+        ],
+        "contractDependencies": [
+          25,
+          284,
+          302,
+          379,
+          771,
+          1306,
+          1437
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1375,
+        "linearizedBaseContracts": [
+          1375,
+          771,
+          379,
+          284,
+          302,
+          1306,
+          25
+        ],
+        "name": "CappedVoteStage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1363,
+              "nodeType": "Block",
+              "src": "353:7:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1364,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1358,
+                    "name": "_name",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1351,
+                    "src": "300:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1359,
+                    "name": "_totalAmount",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1353,
+                    "src": "306:12:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1360,
+                    "name": "_numOfChoices",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1355,
+                    "src": "319:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1361,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1357,
+                  "name": "StageFactory",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1306,
+                  "src": "287:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StageFactory_$1306_$",
+                    "typeString": "type(contract StageFactory)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "287:46:5"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1356,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1351,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "224:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1350,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1353,
+                  "name": "_totalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "238:20:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1355,
+                  "name": "_numOfChoices",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "259:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1354,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:58:5"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 1362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:0:5"
+            },
+            "scope": 1375,
+            "src": "212:148:5",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1373,
+              "nodeType": "Block",
+              "src": "438:57:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1370,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "464:21:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_UnlimitedStrategy_$1437_$",
+                        "typeString": "function () returns (contract UnlimitedStrategy)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1369,
+                        "name": "UnlimitedStrategy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1437,
+                        "src": "468:17:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UnlimitedStrategy_$1437",
+                          "typeString": "contract UnlimitedStrategy"
+                        }
+                      }
+                    },
+                    "id": 1371,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "464:23:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UnlimitedStrategy_$1437",
+                      "typeString": "contract UnlimitedStrategy"
+                    }
+                  },
+                  "functionReturnParameters": 1368,
+                  "id": 1372,
+                  "nodeType": "Return",
+                  "src": "457:30:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1374,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createLimitStrategy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1365,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1367,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1374,
+                  "src": "423:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                    "typeString": "contract LimitStrategy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1366,
+                    "name": "LimitStrategy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1449,
+                    "src": "423:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                      "typeString": "contract LimitStrategy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:15:5"
+            },
+            "scope": 1375,
+            "src": "365:130:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1376,
+        "src": "162:335:5"
+      }
+    ],
+    "src": "0:498:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/ThirdStage/UnlimitedVoteStage.sol",
+    "exportedSymbols": {
+      "CappedVoteStage": [
+        1375
+      ]
+    },
+    "id": 1376,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1344,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/StageFactory.sol",
+        "file": "../StageFactory.sol",
+        "id": 1345,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 1307,
+        "src": "26:29:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Stages/SecondStage/VoteStageFactory.sol",
+        "file": "../SecondStage/VoteStageFactory.sol",
+        "id": 1346,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 772,
+        "src": "56:45:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/EachStrategy/UnlimitedStrategy.sol",
+        "file": "../../Strategy/EachStrategy/UnlimitedStrategy.sol",
+        "id": 1347,
+        "nodeType": "ImportDirective",
+        "scope": 1376,
+        "sourceUnit": 1438,
+        "src": "102:59:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1348,
+              "name": "VoteStageFactory",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 771,
+              "src": "190:16:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VoteStageFactory_$771",
+                "typeString": "contract VoteStageFactory"
+              }
+            },
+            "id": 1349,
+            "nodeType": "InheritanceSpecifier",
+            "src": "190:16:5"
+          }
+        ],
+        "contractDependencies": [
+          25,
+          284,
+          302,
+          379,
+          771,
+          1306,
+          1437
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1375,
+        "linearizedBaseContracts": [
+          1375,
+          771,
+          379,
+          284,
+          302,
+          1306,
+          25
+        ],
+        "name": "CappedVoteStage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1363,
+              "nodeType": "Block",
+              "src": "353:7:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1364,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1358,
+                    "name": "_name",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1351,
+                    "src": "300:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1359,
+                    "name": "_totalAmount",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1353,
+                    "src": "306:12:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1360,
+                    "name": "_numOfChoices",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1355,
+                    "src": "319:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1361,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1357,
+                  "name": "StageFactory",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1306,
+                  "src": "287:12:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StageFactory_$1306_$",
+                    "typeString": "type(contract StageFactory)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "287:46:5"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1356,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1351,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "224:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1350,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1353,
+                  "name": "_totalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "238:20:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1355,
+                  "name": "_numOfChoices",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1364,
+                  "src": "259:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1354,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:58:5"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 1362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:0:5"
+            },
+            "scope": 1375,
+            "src": "212:148:5",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1373,
+              "nodeType": "Block",
+              "src": "438:57:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1370,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "464:21:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_UnlimitedStrategy_$1437_$",
+                        "typeString": "function () returns (contract UnlimitedStrategy)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1369,
+                        "name": "UnlimitedStrategy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1437,
+                        "src": "468:17:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UnlimitedStrategy_$1437",
+                          "typeString": "contract UnlimitedStrategy"
+                        }
+                      }
+                    },
+                    "id": 1371,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "464:23:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UnlimitedStrategy_$1437",
+                      "typeString": "contract UnlimitedStrategy"
+                    }
+                  },
+                  "functionReturnParameters": 1368,
+                  "id": 1372,
+                  "nodeType": "Return",
+                  "src": "457:30:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1374,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createLimitStrategy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1365,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1367,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1374,
+                  "src": "423:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                    "typeString": "contract LimitStrategy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1366,
+                    "name": "LimitStrategy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1449,
+                    "src": "423:13:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                      "typeString": "contract LimitStrategy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:15:5"
+            },
+            "scope": 1375,
+            "src": "365:130:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1376,
+        "src": "162:335:5"
+      }
+    ],
+    "src": "0:498:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2021-05-18T00:20:13.686Z"
+}

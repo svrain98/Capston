@@ -1,0 +1,467 @@
+{
+  "contractName": "UnlimitedStrategy",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_investment",
+          "type": "uint256"
+        },
+        {
+          "name": "_fullInvestmentReceived",
+          "type": "uint256"
+        }
+      ],
+      "name": "isFullInvestmentWithinLimit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060c88061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306b9c583146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506090565b604051808215151515815260200191505060405180910390f35b600060019050929150505600a165627a7a72305820e859367186019374be3aafc876e533766bcbbf34f295bcf05c0bfe543b52b3e90029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306b9c583146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506090565b604051808215151515815260200191505060405180910390f35b600060019050929150505600a165627a7a72305820e859367186019374be3aafc876e533766bcbbf34f295bcf05c0bfe543b52b3e90029",
+  "sourceMap": "57:216:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;57:216:7;;;;;;;",
+  "deployedSourceMap": "57:216:7:-;;;;;;;;;;;;;;;;;;;;;;;;107:164;;8:9:-1;5:2;;;30:1;27;20:12;5:2;107:164:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;237:4;260;253:11;;107:164;;;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"../LimitStrategy.sol\";\ncontract UnlimitedStrategy is LimitStrategy {\n    function isFullInvestmentWithinLimit(uint256 _investment, \n        uint256 _fullInvestmentReceived) \n        public view returns (bool) {\n        return true;\n    }\n}",
+  "sourcePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/EachStrategy/UnlimitedStrategy.sol",
+  "ast": {
+    "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/EachStrategy/UnlimitedStrategy.sol",
+    "exportedSymbols": {
+      "UnlimitedStrategy": [
+        1437
+      ]
+    },
+    "id": 1438,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1421,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/LimitStrategy.sol",
+        "file": "../LimitStrategy.sol",
+        "id": 1422,
+        "nodeType": "ImportDirective",
+        "scope": 1438,
+        "sourceUnit": 1450,
+        "src": "26:30:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1423,
+              "name": "LimitStrategy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1449,
+              "src": "87:13:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                "typeString": "contract LimitStrategy"
+              }
+            },
+            "id": 1424,
+            "nodeType": "InheritanceSpecifier",
+            "src": "87:13:7"
+          }
+        ],
+        "contractDependencies": [
+          1449
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1437,
+        "linearizedBaseContracts": [
+          1437,
+          1449
+        ],
+        "name": "UnlimitedStrategy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1435,
+              "nodeType": "Block",
+              "src": "243:28:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1433,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "260:4:7",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1432,
+                  "id": 1434,
+                  "nodeType": "Return",
+                  "src": "253:11:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1436,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isFullInvestmentWithinLimit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1426,
+                  "name": "_investment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "144:19:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1425,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "144:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1428,
+                  "name": "_fullInvestmentReceived",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "174:31:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1427,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "143:63:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1431,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "237:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1430,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:6:7"
+            },
+            "scope": 1437,
+            "src": "107:164:7",
+            "stateMutability": "view",
+            "superFunction": 1448,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1438,
+        "src": "57:216:7"
+      }
+    ],
+    "src": "0:273:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/EachStrategy/UnlimitedStrategy.sol",
+    "exportedSymbols": {
+      "UnlimitedStrategy": [
+        1437
+      ]
+    },
+    "id": 1438,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1421,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/home/svrainp/Project/Capston_truffle/contracts/Strategy/LimitStrategy.sol",
+        "file": "../LimitStrategy.sol",
+        "id": 1422,
+        "nodeType": "ImportDirective",
+        "scope": 1438,
+        "sourceUnit": 1450,
+        "src": "26:30:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1423,
+              "name": "LimitStrategy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1449,
+              "src": "87:13:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LimitStrategy_$1449",
+                "typeString": "contract LimitStrategy"
+              }
+            },
+            "id": 1424,
+            "nodeType": "InheritanceSpecifier",
+            "src": "87:13:7"
+          }
+        ],
+        "contractDependencies": [
+          1449
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1437,
+        "linearizedBaseContracts": [
+          1437,
+          1449
+        ],
+        "name": "UnlimitedStrategy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1435,
+              "nodeType": "Block",
+              "src": "243:28:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1433,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "260:4:7",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1432,
+                  "id": 1434,
+                  "nodeType": "Return",
+                  "src": "253:11:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1436,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isFullInvestmentWithinLimit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1426,
+                  "name": "_investment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "144:19:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1425,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "144:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1428,
+                  "name": "_fullInvestmentReceived",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "174:31:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1427,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "143:63:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1431,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1436,
+                  "src": "237:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1430,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:6:7"
+            },
+            "scope": 1437,
+            "src": "107:164:7",
+            "stateMutability": "view",
+            "superFunction": 1448,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1438,
+        "src": "57:216:7"
+      }
+    ],
+    "src": "0:273:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2021-05-18T00:20:13.687Z"
+}
